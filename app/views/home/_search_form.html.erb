@@ -1,0 +1,7 @@
+<%= image_tag 'fork-knife.png', id: 'fork-knife' %>
+<%= form_tag recipes_path, :method => 'get', id: 'search_form' do %>
+  <div>
+    <%= text_field_tag :search, params[:search], id: 'search_field', placeholder: "料理や材料を入れてください" %>
+    <%= submit_tag "検索", :name => nil, id: 'search_button' %>
+  </div>
+<% end %>

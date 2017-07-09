@@ -1,0 +1,15 @@
+<%= form_for [@recipe,@tsukurepo] do |f| %>
+
+<p class='forms'>
+  <%= f.text_area :content, id: "content_input", placeholder: 'メッセージを入力してください' %>
+</p>
+
+<p class="forms">
+    <%= f.file_field :photo, id: 'file_select'%>
+</p>
+
+<p class='forms'>
+  <%= f.submit "送信する", id: 'submit_button' %>
+</p>
+
+<% end %>

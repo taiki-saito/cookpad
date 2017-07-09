@@ -1,0 +1,38 @@
+<div id="recipe_area">
+  <div id="title">
+    <h1><%= @recipe.name %></h1>
+    <p>by <%= @recipe.user.username %></p>
+  </div>
+
+  <div id="recipe_image">
+    <%= image_tag @recipe.photo.url %>
+  </div>
+
+  <div id="recipe_text">
+    <p><%= @recipe.content %></p>
+  </div>
+
+  <% if user_signed_in? and @recipe.user != current_user %>
+    <div class="clear"></div>
+    <div id="tsukurepo_link">
+      <%= link_to "つくれぽを送る", new_recipe_tsukurepo_path(@recipe.id) %>
+    </div>
+  <% end %>
+
+  <div class="clear"></div>
+    <% if !@recipe.tsukurepos.empty? %>
+      <% @recipe.tsukurepos.each do |tsukurepo| %>
+        <div class="tsukurepo_area">
+          <p class="date"><%= format_datetime(tsukurepo.created_at) %></p>
+          <div class="tsukurepo_image">
+            <%= image_tag tsukurepo.photo.url %>
+          </div>
+          <div class="tsukurepo_text">
+            <p><%= tsukurepo.content %></p>
+          </div>
+          <p class="tsukurepo_writer">from <%= tsukurepo.user.username %></p>
+        </div>
+
+      <% end %>
+    <% end %>
+</div>
