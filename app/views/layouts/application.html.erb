@@ -9,8 +9,29 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <header>
+      <a href="/">
+        <div id="logo">
+    		  <%= image_tag 'cookpad.png', class: 'head-img' %>
+    	      <p>COOKPAD</p>
+    		  <%= image_tag 'cookpad.png', class: 'head-img' %>
+        </div>
+      </a>
+
+      <nav>
+            <ul>
+                <% if user_signed_in? %>
+                  <li><%= link_to "レシピ投稿", new_recipe_path %></li>
+                  <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :buttons %></li>
+                <% else %>
+                  <li><%= link_to "ユーザー登録", new_user_registration_path, class: :buttons %></li>
+                  <li><%= link_to "ログイン", new_user_session_path, class: :buttons %></li>
+                <% end %>
+            </ul>
+        </nav>
+	  </header>
+    <div id="content_wrap">
+      <%= yield %>
+    </div>
   </body>
 </html>

@@ -13,3 +13,334 @@
  *= require_tree .
  *= require_self
  */
+ /*     全体設定      */
+ * {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+	background-color:#FFEBCD;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.clear{
+  clear: both;
+}
+
+/*    ヘッダー設定    */
+header{
+	width:100%;
+	/*text-align:center;*/
+}
+
+header a{
+  display: inline-block;
+}
+
+#logo{
+  display: inline-block;
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+#logo p{
+  color: rgb(51, 0, 0);
+  display: inline;
+  font-size: 45px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header img{
+  width: 50px;
+  height: 50px;
+}
+
+nav{
+  display: inline-block;
+    /*float: left;*/
+    margin-top: 15px;
+}
+
+nav ul li{
+    float: left;
+    /*margin-left: 30px;*/
+    list-style-type: none;
+
+  /*display: inline-block;
+	 cursor: pointer;
+	 padding: 8px 50px;
+	 background-color: #5dca88;
+	 box-shadow: 0px 5px #279C56;
+	 border-radius: 3px;
+	 color: #fff;
+	 font-size: 12px;
+	 margin-top:100px;
+	 margin-left: 120px;*/
+}
+
+nav ul li a{
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+  	 cursor: pointer;
+  	 padding: 4px 50px;
+  	 background-color: #5dca88;
+  	 box-shadow: 0px 5px #279C56;
+  	 border-radius: 3px;
+  	 color: #fff;
+  	 font-size: 16px;
+  	 /*margin-top:100px;*/
+  	 margin-left: 120px;
+}
+
+/*      メインコンテンツ設定      */
+div#content_wrap{
+     width: 1000px;
+     margin: 20px 60px;
+ }
+
+ #fork-knife{
+   display: inline-block;
+   height:50px;
+   vertical-align: middle;
+ }
+
+/*      検索フォーム関連      */
+ #search_form{
+   display: inline-block;
+ }
+
+ #search_field{
+   vertical-align: middle;
+   display: inline-block;
+   height: 24px;
+   width: 300px;
+   font-size: 18px;
+ }
+
+ #search_button{
+   display: inline-block;
+   vertical-align: bottom;
+   height: 40px;
+   width: 65px;
+   font-size: 40px;
+ }
+
+/*     ユーザー認証関連      */
+.user_title{
+  margin-bottom: 10px;
+}
+
+.field{
+  margin-bottom: 20px;
+}
+
+.field input{
+  margin-top: 5px;
+  height: 24px;
+  width: 200px;
+  font-size: 18px;
+}
+
+.field label{
+  font-size: 16px;
+}
+
+.actions input{
+  width: 75px;
+  font-size: 18px;
+}
+
+#user_remember_me{
+  width: 16px;
+}
+
+/*      レシピ投稿関連     */
+  #title_input{
+    height: 24px;
+    width: 500px;
+    font-size: 16px;
+  }
+
+  #content_input{
+    height: 240px;
+    width: 500px;
+    font-size: 16px;
+  }
+
+  #submit_button{
+    width: 80px;
+    height: 24px;
+    font-size: 18px;
+  }
+
+#file_select{
+  font-size: 18px;
+}
+
+  .forms{
+    margin-bottom: 20px;
+  }
+
+.foms label{
+  font-size: 18px;
+}
+
+/*      レシピ一覧       */
+#recipe_list{
+  margin-top: 20px;
+  background-color: white;
+
+  border: 1px solid rgb(222, 213, 192);
+  border-radius: 5px;
+}
+
+.list_box{
+  border-bottom: 1px solid black;
+  padding-top: 5px;
+}
+
+#recipe_list div div img{
+  display: inline-block;
+  height: 100%;
+}
+
+.list_text{
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.list_text h2{
+  color: rgb(136, 155, 0);
+}
+
+.list_text p{
+  color: gray;
+}
+
+.list_image{
+  display: inline-block;
+  height: 80px;
+  width: 80px;
+  text-align: center;
+  overflow: hidden;
+}
+
+#search_message{
+  margin: 10px;
+}
+
+/*      レシピ詳細表示     */
+#recipe_area{
+  background-color: white;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid rgb(222, 213, 192);
+  border-radius: 5px;
+}
+
+#title{
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+#title h1{
+  color: rgb(136, 155, 0);
+  display: inline;
+}
+
+#title p{
+  color: gray;
+  display: inline;
+  margin-left: 50px;
+}
+
+#recipe_image{
+  width: 300px;
+  height: 300px;
+  margin-top: 10px;
+  margin-left: 20px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+#recipe_image img{
+  height: 100%
+}
+
+#recipe_text{
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
+#recipe_text p{
+  font-size: 18px;
+}
+
+/*      つくれぽ関連      */
+#tsukurepo_link{
+  margin-top: 40px;
+  margin-left: 20px;
+  /*padding: 5px;*/
+  width: 132px;
+  border: 1px rgb(222, 213, 192) solid;
+  border-radius: 3px;
+  background-color: rgb(245, 245, 245);
+  /*width: 120px;
+  height: 32px;*/
+}
+
+#tsukurepo_link a{
+  margin: 10px;
+}
+
+.tsukurepo_area{
+  width: 470px;
+  background-color: white;
+  margin-top: 10px;
+  margin-left: 20px;
+  border: 1px solid rgb(222, 213, 192);
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.tsukurepo_area p{
+  margin-left: 5px;
+}
+
+.tsukurepo_image{
+  height: 150px;
+  width: 150px;
+  margin-left: 5px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.tsukurepo_image img{
+  height: 150px;
+}
+
+.tsukurepo_text{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.date{
+  color: gray;
+  font-size: 14px;
+}
+
+.tsukurepo_writer{
+  color: rgb(153, 118, 103);
+  font-size: 16px;
+  text-align: right;
+  margin-right: 20px;
+}
